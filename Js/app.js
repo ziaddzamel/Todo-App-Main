@@ -39,8 +39,8 @@ function addListItem(event) {
   liElement.style.display = compleatSectionActive ? "none" : "";
 
 
-  const spanCheck = createIconSpan("check", "/images/icon-check.svg");
-  const spanCross = createIconSpan("cross", "/images/icon-cross.svg");
+  const spanCheck = createIconSpan("check", "./images/icon-check.svg");
+  const spanCross = createIconSpan("cross", "./images/icon-cross.svg");
 
   liElement.appendChild(spanCheck);
   liElement.appendChild(spanCross);
@@ -247,8 +247,8 @@ function loadFromLocalStorage() {
         liElement.style.display = "none";
       }
 
-      const spanCheck = createIconSpan("check", "/images/icon-check.svg");
-      const spanCross = createIconSpan("cross", "/images/icon-cross.svg");
+      const spanCheck = createIconSpan("check", "./images/icon-check.svg");
+      const spanCross = createIconSpan("cross", "./images/icon-cross.svg");
 
       liElement.appendChild(spanCheck);
       liElement.appendChild(spanCross);
