@@ -1,0 +1,303 @@
+
+
+
+
+
+
+body {
+    transition: 0.3s ease;
+    background-color: hsl(235, 21%, 11%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+body.light{
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.top{
+    background-image: url(/images/bg-desktop-dark.jpg);
+    background-size: cover;
+    height: 40vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition:0.3s ease;
+}
+.light .top{
+    background-image: url(/images/bg-desktop-light.jpg);
+    transition:0.3s ease;
+}
+@media screen and (max-width: 500px) {
+    .top {
+        background-image: url(/images/bg-mobile-dark.jpg);
+    }
+}
+@media screen and (max-width: 500px) {
+    .light .top {
+        background-image: url(/images/bg-mobile-light.jpg);
+    }
+}
+
+.content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 455px;
+}
+@media screen and (max-width: 500px) {
+    .content {
+        width: 350px;
+    }
+}
+.content header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+header h1{
+    letter-spacing: 12px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+header img{
+    width: 20px;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    border: none;
+    background-color: hsl(235, 24%, 19%);
+    padding: 18px 0 18px 55px;
+    margin: 0;
+    outline: none;
+    width: 330px;
+    border-radius: 5px;
+    color:  hsl(234, 39%, 85%);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    /* Add any additional custom styles you want */
+}
+@media screen and (max-width: 500px) {
+    input[type="text"] {
+        width: 225px;
+    }
+}
+.light input[type="text"] {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(235, 19%, 35%);
+}
+.mid{
+    position: relative;
+    }
+.mid .circl{
+    width: 18px;
+    height: 19px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    border: hsl(237, 14%, 26%) 1px solid;
+    background-color: hsl(235, 24%, 19%);
+}
+.light .mid .circl{
+    background-color: hsl(0, 0%, 98%);
+    border-color: hsl(236, 33%, 92%);
+}
+.mid .button{
+    background-color: hsl(235, 24%, 19%);
+    padding: 18px 15px 19px 14px;
+    border-radius: 3px;
+    color:  hsl(234, 39%, 85%);
+    text-align: center;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .mid .button {
+        padding: 18px 13px 19px 13px;
+    }
+}
+@media screen and (max-width: 500px) {
+    input[type="text"] {
+        width: 225px;
+    }
+}
+.light .mid .button{
+    background-color: hsl(0, 0%, 98%);
+}
+ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+ul li {
+    list-style: none;
+    background-color: hsl(235, 24%, 19%);
+    color:  hsl(234, 39%, 85%);
+    padding: 18px 0 18px 55px;
+    border-bottom: hsl(237, 14%, 26%) 1px solid;
+    position: relative;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    ul li {
+        width: 290px;
+    }
+}
+ul li:first-child{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.light ul li{
+    background-color: hsl(0, 0%, 98%);
+    border-bottom-color: hsl(233, 11%, 84%);
+    box-shadow: -1px 20px 10px rgba(0, 0, 0, 0.2);
+    color: hsl(235, 19%, 35%);
+}
+ul li.done{
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
+.light ul li.done{
+    color:  hsl(233, 11%, 84%);
+}
+ul li .check{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    left: 20px;
+    border: hsl(237, 14%, 26%) 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.light ul li .check{
+    border-color: hsl(236, 33%, 92%);
+}
+li .check:hover {
+    border: 1px solid linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}  
+ul li .check img{
+    width: 10px;
+    height: 10px;
+    display: none;
+}
+ul li.checked img{
+    display: block;
+}
+ul li.checked .check{
+    background: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+ul li .cross img{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+ul li:hover .cross img{
+    display: block;
+}
+.bottom{
+    position: relative;
+    background-color: hsl(235, 24%, 19%);
+    color:  hsl(234, 39%, 85%);
+    padding: 12px 0 12px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ;
+}
+@media screen and (max-width: 500px) {
+    .bottom  {
+        justify-content: space-between;
+        padding: 16px 18px 16px 17px;
+        width: 310px;
+    }
+}
+.light .bottom{
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: -2px 3px 12px rgb(0 0 0 / 10%);;
+
+}
+.bottom .count{
+    font-size: 10px;
+    color: hsl(234, 11%, 52%);
+}.bottom .filters{
+    margin-left: 20px;
+
+}
+@media screen and (max-width: 500px) {
+    .bottom .filters {
+        margin-top: 10px;
+        position: absolute;
+        margin-top: 135px;
+        width: 140px;
+        background: hsl(235, 24%, 19%);
+        margin-left: -16px;
+        padding: 16px 102px 15px 102px;
+        border-radius: 3px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .light .bottom .filters {
+        background-color: hsl(0, 0%, 98%);
+        box-shadow: -2px 3px 12px rgb(0 0 0 / 10%);
+    }
+}
+
+.bottom .filters a{
+    text-decoration: none;
+    color: hsl(234, 11%, 52%);
+    font-size: 13px;
+    margin-right: 10px;
+}
+.light .bottom .filters a{
+    color: hsl(236, 9%, 61%)
+}
+.bottom .filters .Active{
+    color:  hsl(220, 98%, 61%);
+}
+.light .bottom .filters .Active{
+    color:  hsl(220, 98%, 61%);
+}
+.bottom .clear a{
+    text-decoration: none;
+    font-size: 13px;
+    color: hsl(234, 11%, 52%);
+}
+.bottom .filters a:hover , .clear a:hover{
+    color: hsl(236, 33%, 92%);
+}
+
+.light .bottom .filters a:hover{
+    color: hsl(235, 19%, 35%);
+}
+.clear a:hover{
+    color: hsl(236, 33%, 92%);
+}
+.clear a:hover{
+    color: hsl(235, 19%, 35%);
+}
+.bottom .filters .Active:hover{
+    color:  hsl(220, 98%, 61%);
+}
+.light .bottom .filters .Active:hover{
+    color:  hsl(220, 98%, 61%);
+}
+.dragging {
+    opacity: 1;
+}
+
+.drag-over {
+    border-bottom: 1px solid hsl(220, 98%, 61%);
+}
