@@ -8,10 +8,10 @@ let body = document.querySelector("body");
 
 function updateDarkModeUI() {
   if (isDarkMode) {
-    darkModeToggle.src = "/images/icon-moon.svg";
+    darkModeToggle.src = "./images/icon-moon.svg";
     body.classList.add("light");
   } else {
-    darkModeToggle.src = "/images/icon-sun.svg";
+    darkModeToggle.src = "./images/icon-sun.svg";
     body.classList.remove("light");
   }
 }
