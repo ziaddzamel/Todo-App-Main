@@ -59,6 +59,7 @@ header h1{
 header img{
     width: 20px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 input[type="text"] {
     border: none;
